@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import messagebox
 
 class Transportlidzeklis:
-    "Bāzes klase, kas satur pamata informāciju par transportlīdzekli."
+    #Bāzes klase, kas satur pamata informāciju par transportlīdzekli
 
     def __init__(self, marka: str, gads: int, bazes_cena: float):
         self.marka = marka
