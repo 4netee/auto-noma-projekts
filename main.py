@@ -25,7 +25,6 @@ class Transportlidzeklis:
         # Atgriež pamatinformāciju par auto.
         return f"Auto: {self.marka}, Izlaiduma gads: {self.gads}"
 
-
 class AutoNoma(Transportlidzeklis):
     # Apakšklase, kas pārvalda auto nomas aprēķinus.
     def __init__(self, marka: str, gads: int, bazes_cena: float, dienu_skaits: int):
@@ -36,7 +35,6 @@ class AutoNoma(Transportlidzeklis):
     def aprekinat_kopejo_cenu(self) -> float:
         dienas_maksajums = self.get_bazes_cena()
         return dienas_maksajums * self.dienu_skaits
-
 
 #TKINTER LOGS
 
@@ -83,10 +81,8 @@ def palaist_gui():
 
     root.mainloop()
 
-
 # Programmas izpildes daļa
 if __name__ == "__main__":
-    # Ja vēlies, vari atstāt arī konsoles printus:
     print("Auto Nomas Sistēmas Tests")
     mans_auto_tests = AutoNoma("Audi A4", 2020, 40.0, 5)
     print(mans_auto_tests.izvadit_aprakstu())
@@ -94,5 +90,4 @@ if __name__ == "__main__":
     print(f"Nomas ilgums: {mans_auto_tests.dienu_skaits} dienas")
     print(f"Kopējā cena: {mans_auto_tests.aprekinat_kopejo_cenu()} EUR")
     
-    # Palaižam vienkāršo Tkinter logu
     palaist_gui()
